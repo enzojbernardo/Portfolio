@@ -1,6 +1,6 @@
 # Portfolio
 
-This repository is the starting point for a personal portfolio built with React, TypeScript, and Vite.
+This repository is a personal portfolio built with React, TypeScript, and Vite.
 
 ## What is here
 
@@ -37,4 +37,4 @@ npm run dev
 
 ## Notes
 
-This repo is currently a scaffold. The docs define the intended structure, but the actual React app still needs to be built.
+The app is organized as a single-page portfolio with sections for navigation, hero, education, work, rowing, contact, and footer content.
