@@ -1,3 +1,5 @@
+import OrbitingCirclesGlobe from '@/components/ui/orbiting-circles-02'
+
 const heroContent = {
   title: 'Enzo Bernardo',
   subtitle: 'Business Economics Student at UCLA',
@@ -9,17 +11,23 @@ const heroContent = {
 
 function HeroSection() {
   return (
-    <section className="hero" id="hero">
-      <h1>{heroContent.title}</h1>
-      <p className="hero-copy">{heroContent.subtitle}</p>
-      <p className="hero-support">{heroContent.support}</p>
-      <div className="hero-actions">
-        <a className="primary-button" href={heroContent.primaryCta.href}>
-          {heroContent.primaryCta.label}
-        </a>
-        <a className="secondary-button" href={heroContent.secondaryCta.href}>
-          {heroContent.secondaryCta.label}
-        </a>
+    <section className="hero hero-with-orbits" id="hero">
+      <div className="hero-orbits" aria-hidden="true">
+        <OrbitingCirclesGlobe />
+      </div>
+
+      <div className="hero-content">
+        <h1>{heroContent.title}</h1>
+        <p className="hero-copy">{heroContent.subtitle}</p>
+        <p className="hero-support">{heroContent.support}</p>
+        <div className="hero-actions">
+          <a className="primary-button" href={heroContent.primaryCta.href}>
+            {heroContent.primaryCta.label}
+          </a>
+          <a className="secondary-button" href={heroContent.secondaryCta.href}>
+            {heroContent.secondaryCta.label}
+          </a>
+        </div>
       </div>
     </section>
   )
