@@ -1,17 +1,15 @@
 const heroContent = {
-  eyebrow: 'React, TypeScript, and Vite',
   title: 'Enzo Bernardo',
   subtitle: 'Business Economics Student at UCLA',
   support:
-    'A concise portfolio scaffold built around the sections in the architecture doc, ready for content and polish.',
+    'Exploring economics through analysis, data, and technology. Interested in how systems work and building solutions to complex problems.',
   primaryCta: { label: 'Contact', href: '#contact' },
-  secondaryCta: { label: 'View background', href: '#education' },
+  secondaryCta: { label: 'About me', href: '#education' },
 }
 
 function HeroSection() {
   return (
     <section className="hero" id="hero">
-      <div className="eyebrow">{heroContent.eyebrow}</div>
       <h1>{heroContent.title}</h1>
       <p className="hero-copy">{heroContent.subtitle}</p>
       <p className="hero-support">{heroContent.support}</p>
