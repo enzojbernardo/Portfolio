@@ -15,6 +15,8 @@ function App() {
       <main>
         <HeroSection />
 
+        <div className="hero-education-blur" aria-hidden="true" />
+
         <section className="content-grid">
           <EducationSection />
           <WorkSection />

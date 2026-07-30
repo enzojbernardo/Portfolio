@@ -1,48 +1,51 @@
-const educationItems = [
-  {
-    school: 'Cathedral Catholic High School',
-    years: '2022-2026',
-    note: 'Building a strong foundation across math, science, and leadership.',
-  },
-  {
-    school: 'UCLA Business Economics Major',
-    years: '2026-2030',
-    note: 'Focused on data, decision-making, and the economics of growth.',
-  },
+import cathedralImage from '@/assets/Cathedral.jpg'
+import uclaImage from '@/assets/UCLA.webp'
+import { DestinationCard } from '@/components/ui/card-21'
+
+const uclaDetails = [
+  'B.A. Business Economics (2026-2030)',
+  'Intro to Microeconomics',
+  'Intro to Macroeconomics',
+  'Statistics for Economics',
 ]
 
-const courses = [
-  'Multivariable Calculus at UCSD Extension',
+const cathedralDetails = [
+  'High School Diploma (2022-2026)',
   'AP Physics C',
   'AP Statistics',
-  'AP Macroeconomics',
 ]
 
 function EducationSection() {
   return (
-    <article className="panel" id="education">
+    <article className="panel education-panel" id="education">
       <div className="section-heading">
-        <span>01</span>
         <h2>Education</h2>
       </div>
-      <div className="stack">
-        {educationItems.map((item) => (
-          <div className="entry-card" key={item.school}>
-            <div>
-              <h3>{item.school}</h3>
-              <p>{item.note}</p>
-            </div>
-            <span>{item.years}</span>
-          </div>
-        ))}
-      </div>
-      <div className="course-list">
-        <h3>Notable Courses</h3>
-        <ul>
-          {courses.map((course) => (
-            <li key={course}>{course}</li>
-          ))}
-        </ul>
+      <div className="grid gap-5 md:grid-cols-2">
+        <div className="h-[420px]">
+          <DestinationCard
+            imageUrl={uclaImage}
+            location="UCLA"
+            flag=""
+            stats="Business Economics Major, 2026-2030"
+            href="https://www.ucla.edu"
+            themeColor="217 62% 31%"
+            hoverDetailsTitle="College & Courses"
+            hoverDetails={uclaDetails}
+          />
+        </div>
+        <div className="h-[420px]">
+          <DestinationCard
+            imageUrl={cathedralImage}
+            location="Cathedral Catholic"
+            flag=""
+            stats="High School, 2022-2026"
+            href="https://www.cathedralcatholic.org"
+            themeColor="12 58% 35%"
+            hoverDetailsTitle="School & Courses"
+            hoverDetails={cathedralDetails}
+          />
+        </div>
       </div>
     </article>
   )

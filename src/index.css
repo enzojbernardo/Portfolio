@@ -223,7 +223,7 @@ a {
 .nav a {
   padding: 10px 14px;
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: 10px;
   color: var(--muted-foreground);
   transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
 }
@@ -317,7 +317,7 @@ a {
   justify-content: center;
   min-height: 48px;
   padding: 0 18px;
-  border-radius: 999px;
+  border-radius: 12px;
   border: 1px solid transparent;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
@@ -348,12 +348,30 @@ a {
   gap: 18px;
 }
 
+.hero-education-blur {
+  position: relative;
+  height: clamp(52px, 8vw, 96px);
+  margin-top: -10px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--background) 15%, transparent) 0%,
+    color-mix(in srgb, var(--background) 68%, transparent) 56%,
+    color-mix(in srgb, var(--background) 88%, transparent) 100%
+  );
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.85) 40%, transparent 100%);
+  pointer-events: none;
+}
+
 .panel {
   grid-column: span 12;
   min-height: 100svh;
   padding: 24px;
-  border: 1px solid var(--border);
-  border-radius: 28px;
+  border: none;
+  border-radius: 0;
   background: transparent;
   backdrop-filter: none;
   box-shadow: none;
@@ -364,6 +382,15 @@ a {
 
 .contact-panel {
   grid-column: span 12;
+}
+
+.education-panel {
+  min-height: auto;
+  justify-content: flex-start;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
 }
 
 .section-heading {
@@ -402,7 +429,7 @@ a {
   justify-content: space-between;
   gap: 18px;
   padding: 18px;
-  border: 1px solid var(--border);
+  border: none;
   border-radius: 20px;
   background: color-mix(in srgb, #ffffff 96%, var(--secondary) 4%);
 }
@@ -445,8 +472,8 @@ a {
   align-items: center;
   min-height: 48px;
   padding: 0 18px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
+  border-radius: 12px;
+  border: none;
   background: color-mix(in srgb, #ffffff 94%, var(--secondary) 6%);
   transition: transform 160ms ease, border-color 160ms ease;
 }
