@@ -183,28 +183,41 @@ a {
 }
 
 .topbar {
-  position: relative;
-  z-index: 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 4px 0 18px;
+  width: 100vw;
+  margin: -24px calc(50% - 50vw) 18px;
+  padding: 12px clamp(16px, 2.8vw, 36px);
+  border-radius: 0;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: background-color 220ms ease, border-color 220ms ease, backdrop-filter 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.topbar-scrolled {
+  background: color-mix(in srgb, var(--background) 68%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 48%, transparent);
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  box-shadow: none;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--card) 84%, white 16%);
+  justify-content: flex-start;
   color: var(--primary);
-  box-shadow: var(--shadow);
   font-weight: 800;
   letter-spacing: 0.08em;
+  padding: 2px 0;
 }
 
 .nav {

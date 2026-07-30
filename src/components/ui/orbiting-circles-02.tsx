@@ -3,6 +3,8 @@
 import React from 'react'
 import ParticleSphereAnimation from '@/components/ui/orbiting-circles-02-utils/particalsphear'
 
+const orbitPortrait = '/skinny%20enzo.jpg'
+
 const orbits = [
   {
     size: 'w-[27.5rem] h-[27.5rem] md:w-[45rem] md:h-[45rem]',
@@ -98,8 +100,8 @@ export default function OrbitingCirclesGlobeDemo() {
                   }
                 >
                   <img
-                    src={iconData.src}
-                    alt={iconData.alt}
+                    src={orbitPortrait}
+                    alt="Enzo Bernardo"
                     width={32}
                     height={32}
                     className="h-6 w-6 rounded-full object-cover md:h-8 md:w-8"

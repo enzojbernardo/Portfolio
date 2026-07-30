@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 const navItems = [
   { label: 'Education', href: '#education' },
   { label: 'Work', href: '#work' },
@@ -6,8 +8,23 @@ const navItems = [
 ]
 
 function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 12)
+    }
+
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
-    <header className="topbar">
+    <header className={`topbar ${isScrolled ? 'topbar-scrolled' : ''}`}>
       <a className="brand" href="#hero">
         EB
       </a>
