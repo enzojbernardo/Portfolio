@@ -76,13 +76,13 @@ const DestinationCard = React.forwardRef<HTMLDivElement, DestinationCardProps>(
           </div>
 
           {hoverDetails && hoverDetails.length > 0 ? (
-            <div className="absolute inset-x-4 top-4 rounded-xl border border-white/30 bg-black/55 p-4 text-white opacity-0 backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100">
+            <div className="absolute inset-x-4 top-4 rounded-xl border border-white/60 bg-white/25 p-4 text-slate-950 opacity-0 backdrop-blur-lg transition-opacity duration-300 group-hover:opacity-100">
               {hoverDetailsTitle ? (
-                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] text-white/85">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.12em] text-slate-800/90">
                   {hoverDetailsTitle}
                 </p>
               ) : null}
-              <ul className="m-0 space-y-1.5 p-0 pl-4 text-sm text-white/90">
+              <ul className="m-0 space-y-1.5 p-0 pl-4 text-sm text-slate-900/90">
                 {hoverDetails.map((detail) => (
                   <li key={`${location}-${detail}`}>{detail}</li>
                 ))}
