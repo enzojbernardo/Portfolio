@@ -69,10 +69,6 @@ const DestinationCard = React.forwardRef<HTMLDivElement, DestinationCardProps>(
             </h3>
             <p className="mt-1 text-sm font-medium text-white/80">{stats}</p>
 
-            <div className="mt-8 flex items-center justify-between rounded-md border border-[hsl(var(--theme-color)/0.3)] bg-[hsl(var(--theme-color)/0.2)] px-4 py-3 backdrop-blur-md transition-all duration-300 group-hover:border-[hsl(var(--theme-color)/0.5)] group-hover:bg-[hsl(var(--theme-color)/0.4)]">
-              <span className="text-sm font-semibold tracking-wide">Explore Now</span>
-              <ArrowRight className="h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1" />
-            </div>
           </div>
 
           {hoverDetails && hoverDetails.length > 0 ? (
