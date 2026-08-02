@@ -14,6 +14,8 @@ interface DestinationCardProps extends React.HTMLAttributes<HTMLDivElement> {
   hoverDetails?: string[]
 }
 
+const isExternalLink = (href: string) => /^(https?:)?\/\//.test(href) || href.startsWith('mailto:')
+
 const DestinationCard = React.forwardRef<HTMLDivElement, DestinationCardProps>(
   (
     {
@@ -43,6 +45,8 @@ const DestinationCard = React.forwardRef<HTMLDivElement, DestinationCardProps>(
       >
         <a
           href={href}
+          target={isExternalLink(href) ? '_blank' : undefined}
+          rel={isExternalLink(href) ? 'noreferrer noopener' : undefined}
           className="relative block h-full w-full overflow-hidden rounded-2xl shadow-lg transition-all duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-[0_0_60px_-15px_hsl(var(--theme-color)/0.6)]"
           aria-label={`Explore details for ${location}`}
           style={{

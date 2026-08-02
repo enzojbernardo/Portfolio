@@ -352,10 +352,6 @@ a {
   justify-content: center;
 }
 
-.contact-panel {
-  grid-column: span 12;
-}
-
 .education-panel {
   min-height: auto;
   justify-content: flex-start;
@@ -443,48 +439,74 @@ a {
   padding-left: 20px;
 }
 
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.contact-links a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 48px;
-  padding: 0 18px;
-  border-radius: 12px;
-  border: none;
-  background: color-mix(in srgb, #ffffff 94%, var(--secondary) 6%);
-  transition: transform 160ms ease, border-color 160ms ease;
-}
-
-.contact-links a:hover,
-.contact-links a:focus-visible {
-  transform: translateY(-2px);
-  border-color: var(--ring);
-  outline: none;
-}
-
 .footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 22px 4px 0;
+  display: block;
+  padding: 30px 4px 12px;
   color: var(--muted-foreground);
 }
 
-.footer p {
+.footer-card {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.footer-brand h3 {
   margin: 0;
+  color: #111827;
+  font-size: clamp(2rem, 4.3vw, 2.9rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.footer-copy {
+  margin: 22px 0 0;
+  max-width: 520px;
+  color: #6b7280;
+  font-size: clamp(1.05rem, 2.4vw, 1.12rem);
+  line-height: 1.55;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 26px;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  color: #737373;
+  transition: color 180ms ease;
+}
+
+.footer-socials a:hover,
+.footer-socials a:focus-visible {
+  color: #111827;
+  outline: none;
 }
 
 @media (max-width: 860px) {
   .topbar,
   .footer {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   .nav {
@@ -495,8 +517,7 @@ a {
     padding-top: 52px;
   }
 
-  .panel,
-  .contact-panel {
+  .panel {
     grid-column: span 12;
   }
 }
@@ -505,6 +526,29 @@ a {
   .page-shell {
     width: min(100% - 20px, 1120px);
     padding-top: 16px;
+  }
+
+  .footer-card {
+    padding: 0;
+  }
+
+  .footer-brand {
+    gap: 12px;
+  }
+
+  .footer-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-copy {
+    margin-top: 18px;
+    line-height: 1.45;
+  }
+
+  .footer-socials {
+    gap: 18px;
+    margin-top: 22px;
   }
 
   .hero h1 {

@@ -1,4 +1,3 @@
-import ContactSection from './components/ContactSection'
 import EducationSection from './components/EducationSection'
 import Footer from './components/Footer'
 import HeroSection from './components/HeroSection'
@@ -21,7 +20,6 @@ function App() {
           <EducationSection />
           <WorkSection />
           <RowingSection />
-          <ContactSection />
         </section>
       </main>
 
