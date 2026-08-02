@@ -317,7 +317,7 @@ a {
 .content-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 18px;
+  gap: 14px;
 }
 
 .hero-education-blur {
@@ -357,6 +357,16 @@ a {
 }
 
 .education-panel {
+  min-height: auto;
+  justify-content: flex-start;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.work-panel {
+  margin-top: 0;
   min-height: auto;
   justify-content: flex-start;
   border: none;

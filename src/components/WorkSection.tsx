@@ -1,33 +1,48 @@
-const workItems = [
-  {
-    role: 'Content Health Management Intern',
-    company: 'American Specialty Health',
-    years: 'Summer 2026',
-  },
-  {
-    role: 'Tutor',
-    company: 'CrossRoads Tutoring',
-    years: '2025-2026',
-  },
+import { DestinationCard } from '@/components/ui/card-21'
+
+const ashDetails = [
+  'Content Health Management Intern (Summer 2026)',
+  'Assisted with healthcare content operations',
+  'Supported process tracking and quality checks',
+]
+
+const crossroadsDetails = [
+  'Tutor (2025-2026)',
+  'Delivered one-on-one academic support',
+  'Built personalized study plans for students',
 ]
 
 function WorkSection() {
   return (
-    <article className="panel" id="work">
+    <article className="panel work-panel" id="work">
       <div className="section-heading">
-        <span>02</span>
         <h2>Work</h2>
       </div>
-      <div className="stack">
-        {workItems.map((item) => (
-          <div className="entry-card" key={`${item.role}-${item.company}`}>
-            <div>
-              <h3>{item.role}</h3>
-              <p>{item.company}</p>
-            </div>
-            <span>{item.years}</span>
-          </div>
-        ))}
+      <div className="grid gap-5 md:grid-cols-2">
+        <div className="h-[420px]">
+          <DestinationCard
+            imageUrl="/ASH.webp"
+            location="American Specialty Health"
+            flag=""
+            stats="Content Health Management Intern, Summer 2026"
+            href="https://www.ashcompanies.com/"
+            themeColor="205 46% 34%"
+            hoverDetailsTitle="Role & Highlights"
+            hoverDetails={ashDetails}
+          />
+        </div>
+        <div className="h-[420px]">
+          <DestinationCard
+            imageUrl="/Crossroads.png"
+            location="CrossRoads Tutoring"
+            flag=""
+            stats="Tutor, 2025-2026"
+            href="https://www.crossroadstutoring.com/"
+            themeColor="24 56% 36%"
+            hoverDetailsTitle="Role & Highlights"
+            hoverDetails={crossroadsDetails}
+          />
+        </div>
       </div>
     </article>
   )
