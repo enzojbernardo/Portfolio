@@ -12,7 +12,7 @@ interface Footer7Props {
     title: string
     links: Array<{ name: string; href: string }>
   }>
-  description?: string
+  description?: React.ReactNode
   socialLinks?: Array<{
     icon: React.ReactElement
     href: string
@@ -83,7 +83,7 @@ export const Footer7 = ({
   legalLinks = defaultLegalLinks,
 }: Footer7Props) => {
   return (
-    <section className="py-32">
+    <section className="pt-32 pb-8">
       <div className="container mx-auto">
         <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-start lg:text-left">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">

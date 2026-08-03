@@ -34,7 +34,16 @@ function Footer() {
             ],
           },
         ]}
-        description="A collection of projects and experiences in economics, athletics, and technology."
+        description={
+          <span className="inline-flex flex-col gap-1">
+            <a href="mailto:eqbernardo@gmail.com" className="hover:text-primary">
+              eqbernardo@gmail.com
+            </a>
+            <a href="tel:+18582059156" className="hover:text-primary">
+              (858) 205-9156
+            </a>
+          </span>
+        }
         socialLinks={[
           {
             icon: <FaInstagram className="size-5" />,
