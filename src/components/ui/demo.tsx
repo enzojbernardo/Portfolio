@@ -1,19 +1,9 @@
-import { CTASection } from '@/components/ui/cta-with-rectangle'
+import FramerCarousel from '@/components/ui/framer-normal-carousel'
 
-export function CTADemo() {
+export default function FramerNormalCarouselDemo() {
   return (
-    <CTASection
-      badge={{
-        text: 'Agency',
-      }}
-      title="Worth Agency"
-      subtitle="Studio gallery at golden hour"
-      description="A warm editorial landing page with a single vermilion accent and confident restraint."
-      action={{
-        text: 'Get Started',
-        href: '/docs',
-        variant: 'default',
-      }}
-    />
+    <div className='mx-auto w-full max-w-3xl'>
+      <FramerCarousel />
+    </div>
   )
 }
