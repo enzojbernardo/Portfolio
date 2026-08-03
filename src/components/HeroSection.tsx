@@ -1,4 +1,4 @@
-import OrbitingCirclesGlobe from '@/components/ui/orbiting-circles-02'
+import { CTASection } from '@/components/ui/cta-with-rectangle'
 
 const heroContent = {
   title: 'Enzo Bernardo',
@@ -9,16 +9,17 @@ const heroContent = {
 
 function HeroSection() {
   return (
-    <section className="hero hero-with-orbits" id="hero">
-      <div className="hero-orbits" aria-hidden="true">
-        <OrbitingCirclesGlobe />
-      </div>
-
-      <div className="hero-content">
-        <h1>{heroContent.title}</h1>
-        <p className="hero-copy">{heroContent.subtitle}</p>
-        <p className="hero-support">{heroContent.support}</p>
-      </div>
+    <section id="hero" className="hero">
+      <CTASection
+        title={heroContent.title}
+        subtitle={heroContent.subtitle}
+        description={heroContent.support}
+        action={{
+          text: 'Scroll to Explore',
+          href: '#work',
+          variant: 'default',
+        }}
+      />
     </section>
   )
 }

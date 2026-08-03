@@ -1,7 +1,19 @@
-import { Footer7 } from '@/components/ui/footer-7'
+import { CTASection } from '@/components/ui/cta-with-rectangle'
 
-const DemoOne = () => {
-  return <Footer7 />
+export function CTADemo() {
+  return (
+    <CTASection
+      badge={{
+        text: 'Agency',
+      }}
+      title="Worth Agency"
+      subtitle="Studio gallery at golden hour"
+      description="A warm editorial landing page with a single vermilion accent and confident restraint."
+      action={{
+        text: 'Get Started',
+        href: '/docs',
+        variant: 'default',
+      }}
+    />
+  )
 }
-
-export { DemoOne }
